@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6103F1258AA22600F10A6C /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6103F0258AA22600F10A6C /* SearchResponse.swift */; };
 		0B7543B7257FE6470075BD74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7543B6257FE6470075BD74 /* AppDelegate.swift */; };
 		0B7543B9257FE6470075BD74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7543B8257FE6470075BD74 /* SceneDelegate.swift */; };
 		0B7543BB257FE6470075BD74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7543BA257FE6470075BD74 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6103F0258AA22600F10A6C /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		0B7543B3257FE6470075BD74 /* JSONiTUNES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONiTUNES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7543B6257FE6470075BD74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7543B8257FE6470075BD74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				0B7543B6257FE6470075BD74 /* AppDelegate.swift */,
 				0B7543B8257FE6470075BD74 /* SceneDelegate.swift */,
 				0B7543BA257FE6470075BD74 /* ViewController.swift */,
+				0B6103F0258AA22600F10A6C /* SearchResponse.swift */,
 				0B7543BC257FE6470075BD74 /* Main.storyboard */,
 				0B7543BF257FE64B0075BD74 /* Assets.xcassets */,
 				0B7543C1257FE64B0075BD74 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6103F1258AA22600F10A6C /* SearchResponse.swift in Sources */,
 				0B7543BB257FE6470075BD74 /* ViewController.swift in Sources */,
 				0B7543B7257FE6470075BD74 /* AppDelegate.swift in Sources */,
 				0B7543B9257FE6470075BD74 /* SceneDelegate.swift in Sources */,
