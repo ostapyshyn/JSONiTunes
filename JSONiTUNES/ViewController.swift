@@ -17,6 +17,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         setupTableView()
+        
+        let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=25"
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, <#Error?#>) in
+            DispatchQueue.main.async {
+                <#code#>
+            }
+        }
     }
     
     private func setupTableView() {
@@ -27,6 +36,9 @@ class ViewController: UIViewController {
     
     private func setupSearchBar() {
         navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+        navigationController?.navigationBar.prefersLargeTitles = true
+        searchController.obscuresBackgroundDuringPresentation = false
     }
 
 
@@ -47,5 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: UISearchBarDelegate {
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }

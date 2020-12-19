@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSONiTUNES" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <constraint firstItem="cuk-wg-tfr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xNo-XM-88i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="z49-Aj-99h"/>
+                    <navigationItem key="navigationItem" title="Search" id="z49-Aj-99h"/>
                     <connections>
                         <outlet property="table" destination="cuk-wg-tfr" id="l7a-yj-GBq"/>
                     </connections>
