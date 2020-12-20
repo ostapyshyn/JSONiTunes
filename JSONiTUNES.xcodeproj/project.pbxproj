@@ -15,6 +15,7 @@
 		0B7543C0257FE64B0075BD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7543BF257FE64B0075BD74 /* Assets.xcassets */; };
 		0B7543C3257FE64B0075BD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7543C1257FE64B0075BD74 /* LaunchScreen.storyboard */; };
 		0B7B10F4258BE4F5003E4D51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */; };
+		0BEAF7FA258F72F100BCE984 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF7F9258F72F100BCE984 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0B7543C2257FE64B0075BD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7543C4257FE64B0075BD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0BEAF7F9258F72F100BCE984 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				0B7543BA257FE6470075BD74 /* ViewController.swift */,
 				0B6103F0258AA22600F10A6C /* SearchResponse.swift */,
 				0B7543BC257FE6470075BD74 /* Main.storyboard */,
+				0BEAF7F9258F72F100BCE984 /* TestViewController.swift */,
 				0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */,
 				0B7543BF257FE64B0075BD74 /* Assets.xcassets */,
 				0B7543C1257FE64B0075BD74 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				0B6103F1258AA22600F10A6C /* SearchResponse.swift in Sources */,
 				0B7543BB257FE6470075BD74 /* ViewController.swift in Sources */,
 				0B7543B7257FE6470075BD74 /* AppDelegate.swift in Sources */,
+				0BEAF7FA258F72F100BCE984 /* TestViewController.swift in Sources */,
 				0B7543B9257FE6470075BD74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=25"
         guard let url = URL(string: urlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, <#Error?#>) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
-                <#code#>
+                
             }
         }
     }
