@@ -23,9 +23,15 @@ class ViewController: UIViewController {
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
-                
+                if let error = error {
+                    print("some error")
+                    return
+                }
+                guard let data = data else { return }
+                let text = String(data: data, encoding: .utf8)
+                print(text ?? "no data")
             }
-        }
+        }.resume()
     }
     
     private func setupTableView() {
@@ -40,8 +46,6 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         searchController.obscuresBackgroundDuringPresentation = false
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
