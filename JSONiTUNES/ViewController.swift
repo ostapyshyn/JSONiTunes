@@ -18,16 +18,33 @@ class ViewController: UIViewController {
         setupSearchBar()
         setupTableView()
         
-        let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=25"
-        guard let url = URL(string: urlString) else { return }
+        let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=24"
         
+        request(urlString: urlString) { (searchResponse, error) in
+            searchResponse?.results.map({ (track) in
+                print(track.trackName)
+            })
+        }
+    }
+    
+    func request(urlString: String, completion: @escaping (SearchResponse?, Error?) -> Void) { //add result
+        guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     print("some error")
+                    completion(nil, error)
                     return
                 }
                 guard let data = data else { return }
+                
+                do {
+                    let tracks = try JSONDecoder().decode(SearchResponse.self, from: data)
+                    completion(tracks, nil)
+                } catch let jsonError {
+                    print("Failed to decode JSON", jsonError)
+                    completion(nil, jsonError)
+                }
                 let text = String(data: data, encoding: .utf8)
                 print(text ?? "no data")
             }
