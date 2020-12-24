@@ -65,15 +65,31 @@
 				0B7543B6257FE6470075BD74 /* AppDelegate.swift */,
 				0B7543B8257FE6470075BD74 /* SceneDelegate.swift */,
 				0B7543BA257FE6470075BD74 /* ViewController.swift */,
-				0B6103F0258AA22600F10A6C /* SearchResponse.swift */,
+				0B9A7B2125951FF70044B74F /* Model */,
 				0B7543BC257FE6470075BD74 /* Main.storyboard */,
 				0BEAF7F9258F72F100BCE984 /* TestViewController.swift */,
-				0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */,
+				0B9A7B23259520710044B74F /* Networking */,
 				0B7543BF257FE64B0075BD74 /* Assets.xcassets */,
 				0B7543C1257FE64B0075BD74 /* LaunchScreen.storyboard */,
 				0B7543C4257FE64B0075BD74 /* Info.plist */,
 			);
 			path = JSONiTUNES;
+			sourceTree = "<group>";
+		};
+		0B9A7B2125951FF70044B74F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B6103F0258AA22600F10A6C /* SearchResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B9A7B23259520710044B74F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

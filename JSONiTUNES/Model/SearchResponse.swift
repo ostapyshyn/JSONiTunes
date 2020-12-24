@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchResponse: Codable { //Decodable
+struct SearchResponse: Codable {
     var resultCount: Int
     var results: [Track]
 }
@@ -18,5 +18,3 @@ struct Track: Codable { //Decodable
     var artistName: String
     var artworkUrl60: String?
 }
-
-
