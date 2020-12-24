@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SearchResponse: Decodable { //Decodable
+struct SearchResponse: Codable { //Decodable
     var resultCount: Int
     var results: [Track]
 }
 
-struct Track: Decodable { //Decodable
+struct Track: Codable { //Decodable
     var trackName: String
     var collectionName: String
     var artistName: String
