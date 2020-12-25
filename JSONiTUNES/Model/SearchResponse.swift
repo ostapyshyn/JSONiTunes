@@ -13,8 +13,8 @@ struct SearchResponse: Codable {
 }
 
 struct Track: Codable { //Decodable
-    var trackName: String
-    var collectionName: String
+    var trackName: String?
+    var collectionName: String?
     var artistName: String
     var artworkUrl60: String?
 }
