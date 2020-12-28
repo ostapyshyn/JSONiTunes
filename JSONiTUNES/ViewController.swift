@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -46,7 +47,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let track = searchResponse?.results[indexPath.row]
+        let imageUrl = searchResponse?.results[indexPath.row].artworkUrl60
         cell.textLabel?.text = track?.trackName
+        
+        guard let string = imageUrl, let url = URL(string: string) else { return cell }
+        
+        cell.imageView?.sd_setImage(with: url, placeholderImage: UIImage(named: "download"), options: [.continueInBackground], completed: nil)
+        
         return cell
     }
 
@@ -64,19 +71,6 @@ extension ViewController: UISearchBarDelegate {
                 self.searchResponse = searchResponse
                 self.table.reloadData()
             }
-//            self.networkService.request(urlString: urlString) { [weak self] result in
-//                switch result {
-//                case .success(let searchResponse):
-//                    self?.searchResponse = searchResponse
-//                    self?.table.reloadData()
-//
-//                    searchResponse.results.map { track in
-//                        print("track.trackName:", track.trackName ?? "No track name!")
-//                    }
-//                case .failure(let error):
-//                    print("error:", error)
-//                }
-//            }
         })
         print(searchText)
     }
