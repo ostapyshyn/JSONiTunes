@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let networkService = NetworkService()
+    let networkDataFetcher = NetworkDataFetcher()
     var searchResponse: SearchResponse? = nil
     private var timer: Timer?
     
@@ -59,19 +59,24 @@ extension ViewController: UISearchBarDelegate {
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
-            self.networkService.request(urlString: urlString) { [weak self] result in
-                switch result {
-                case .success(let searchResponse):
-                    self?.searchResponse = searchResponse
-                    self?.table.reloadData()
-                    
-                    searchResponse.results.map { track in
-                        print("track.trackName:", track.trackName ?? "track name")
-                    }
-                case .failure(let error):
-                    print("error:", error)
-                }
+            self.networkDataFetcher.fetchTracks(urlString: urlString) { (searchResponse) in
+                guard let searchResponse = searchResponse else { return }
+                self.searchResponse = searchResponse
+                self.table.reloadData()
             }
+//            self.networkService.request(urlString: urlString) { [weak self] result in
+//                switch result {
+//                case .success(let searchResponse):
+//                    self?.searchResponse = searchResponse
+//                    self?.table.reloadData()
+//
+//                    searchResponse.results.map { track in
+//                        print("track.trackName:", track.trackName ?? "No track name!")
+//                    }
+//                case .failure(let error):
+//                    print("error:", error)
+//                }
+//            }
         })
         print(searchText)
     }

@@ -15,6 +15,7 @@
 		0B7543C0257FE64B0075BD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7543BF257FE64B0075BD74 /* Assets.xcassets */; };
 		0B7543C3257FE64B0075BD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7543C1257FE64B0075BD74 /* LaunchScreen.storyboard */; };
 		0B7B10F4258BE4F5003E4D51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */; };
+		0B834D9D2599DCD000E897B1 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B834D9C2599DCD000E897B1 /* NetworkDataFetcher.swift */; };
 		0BEAF7FA258F72F100BCE984 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF7F9258F72F100BCE984 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0B7543C2257FE64B0075BD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7543C4257FE64B0075BD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0B834D9C2599DCD000E897B1 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		0BEAF7F9258F72F100BCE984 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7B10F3258BE4F5003E4D51 /* NetworkService.swift */,
+				0B834D9C2599DCD000E897B1 /* NetworkDataFetcher.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B834D9D2599DCD000E897B1 /* NetworkDataFetcher.swift in Sources */,
 				0B7B10F4258BE4F5003E4D51 /* NetworkService.swift in Sources */,
 				0B6103F1258AA22600F10A6C /* SearchResponse.swift in Sources */,
 				0B7543BB257FE6470075BD74 /* ViewController.swift in Sources */,
